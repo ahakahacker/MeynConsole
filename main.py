@@ -1,10 +1,8 @@
 import yaml
 import os
-import sys
 import locale
 import webbrowser
-
-sys.stdout.reconfigure(encoding='utf-8')
+import sys
 
 with open('config/commands.yaml', 'r', encoding='utf-8') as config_file:
     commands = yaml.safe_load(config_file)
@@ -22,6 +20,7 @@ def execute(command: str):
     # Checking the existence of the command
     if command in commands:
         # Checking the type of command
+
         if commands[command]['type'] == "app":
             apps = commands[command]['path']
 
@@ -34,13 +33,17 @@ def execute(command: str):
             webbrowser.open(f'steam://rungameid/{id}')
             print(lang['command.successfully'])
 
+
     elif command == 'help':
         for command in commands.keys():
             print(command)
         print('help')
-        print('support')
+        print('support (contacts)')
 
-    elif command == 'support':
+    elif command == 'quit' or command == 'exit':
+        sys.exit()
+
+    elif command == 'support' or command == 'contacts':
         for line in lang['info.support']:
             print(line)
 
@@ -48,7 +51,9 @@ def execute(command: str):
         print(lang['command.notfound'])
 
 
-print(lang['info.welcome'])
+for line in lang['info.welcome']:
+    print(line)
+
 while True:
     # Getting user input
     command = input('> ')

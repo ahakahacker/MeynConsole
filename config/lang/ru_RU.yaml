@@ -1,10 +1,11 @@
-info.welcome: MeynConsole (1.0)
+info.welcome:
+  - MeynConsole (1.0)
 info.support:
   - MeynConsole (1.0)
-  - Developer - Meynrun
-  - Contacts
-  - Meynrun's discord - meynrun
-  - TIMRGER's discord - timrger.offical
+  - Разработчик - Meynrun
+  - Контакты
+  - Дискорд Meynrun'а - meynrun
+  - Дискорд TIMRGER'а - timrger.offical
 
 command.notfound: Команда не найдена
 command.successfully: Успешно

@@ -240,3 +240,4 @@ cython_debug/
 #.idea/
 
 !/main.py
+/output/

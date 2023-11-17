@@ -3,3 +3,5 @@ pydev:
   type: app
   path:
     - C:\Program Files\Firefox Nightly\firefox.exe
+    - C:\Program Files\JetBrains\PyCharm-Pro 2023.2.4\bin\pycharm64.exe
+    - C:\Users\ahaka\AppData\Local\Programs\youtube-music-desktop-app\YouTube Music Desktop App.exe

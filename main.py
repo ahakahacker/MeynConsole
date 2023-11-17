@@ -15,6 +15,9 @@ else:
     with open('config/lang/en_US.yaml', 'r', encoding='utf-8') as lang_file:
         lang = yaml.safe_load(lang_file)
 
+EXIT_COMMANDS = ['exit', 'quit']
+SUPPORT_COMMAND = ['support', 'contacts']
+
 
 def execute(command: str):
     # Checking the existence of the command
@@ -40,10 +43,10 @@ def execute(command: str):
         print('help')
         print('support (contacts)')
 
-    elif command == 'quit' or command == 'exit':
+    elif command in EXIT_COMMANDS:
         sys.exit()
 
-    elif command == 'support' or command == 'contacts':
+    elif command in SUPPORT_COMMANDS:
         for line in lang['info.support']:
             print(line)
 
